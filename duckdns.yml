@@ -1,0 +1,18 @@
+version: '3'
+services:
+  duckdns:
+    image: lscr.io/linuxserver/duckdns:latest
+    container_name: duckdns
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Seoul
+      - SUBDOMAINS=zoo-portainer.duckdns.org,zoo-nginx.duckdns.org,zoo-argocd.duckdns.org,zoo-keycloak.duckdns.org
+      - TOKEN=fca42d4e-cde1-470c-99b5-3702d31442ec
+      - UPDATE_IP=ipv4
+      - LOG_FILE=false
+    volumes:
+      - /path/to/duckdns/config:/config
+

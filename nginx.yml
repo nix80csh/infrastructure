@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx-proxy-manager
+    restart: always
+    ports:
+      - "80:80"     # HTTP
+      - "81:81"     # 관리자 웹 UI
+      - "443:443"   # HTTPS
+    volumes:
+      - nginx_data:/data
+      - nginx_data:/etc/letsencrypt
+
+volumes:
+  nginx_data:
