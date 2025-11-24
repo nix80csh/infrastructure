@@ -46,6 +46,10 @@ spec:
               value: "false"
             - name: KC_PROXY
               value: "edge"
+            - name: KC_HOSTNAME_URL
+              value: "https://zoo-keycloak.duckdns.org"
+            - name: KC_HOSTNAME_ADMIN_URL
+              value: "https://zoo-keycloak.duckdns.org"
           ports:
             - name: http
               containerPort: 8080
