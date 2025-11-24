@@ -53,6 +53,7 @@ kind: Ingress
 metadata:
   name: keycloak
 spec:
+  ingressClassName: nginx
   tls:
     - hosts:
         - zoo-keycloak.duckdns.org
