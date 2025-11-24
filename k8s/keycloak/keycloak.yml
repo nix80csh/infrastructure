@@ -34,9 +34,9 @@ spec:
           image: quay.io/keycloak/keycloak:25.0.6
           args: ["start-dev"]
           env:
-            - name: KC_BOOTSTRAP_ADMIN_USERNAME
+            - name: KEYCLOAK_ADMIN
               value: "admin"
-            - name: KC_BOOTSTRAP_ADMIN_PASSWORD
+            - name: KEYCLOAK_ADMIN_PASSWORD
               value: "admin"
             - name: KC_PROXY
               value: "edge"
