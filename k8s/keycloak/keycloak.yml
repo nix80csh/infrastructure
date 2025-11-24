@@ -38,18 +38,8 @@ spec:
               value: "admin"
             - name: KC_BOOTSTRAP_ADMIN_PASSWORD
               value: "admin"
-            - name: KC_HOSTNAME
-              value: "zoo-keycloak.duckdns.org"
-            - name: KC_HOSTNAME_STRICT
-              value: "false"
-            - name: KC_HOSTNAME_STRICT_HTTPS
-              value: "false"
             - name: KC_PROXY
               value: "edge"
-            - name: KC_HOSTNAME_URL
-              value: "https://zoo-keycloak.duckdns.org"
-            - name: KC_HOSTNAME_ADMIN_URL
-              value: "https://zoo-keycloak.duckdns.org"
           ports:
             - name: http
               containerPort: 8080
@@ -62,14 +52,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: keycloak
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/configuration-snippet: |
-      proxy_set_header Host $host;
-      proxy_set_header X-Forwarded-Proto $scheme;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 spec:
   ingressClassName: nginx
   tls:
@@ -80,13 +62,6 @@ spec:
       http:
         paths:
           - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: keycloak
-                port:
-                  number: 8080
-          - path: /admin
             pathType: Prefix
             backend:
               service:
