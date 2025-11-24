@@ -40,8 +40,8 @@ spec:
               value: "admin"
             - name: KC_PROXY
               value: "edge"
-            - name: KC_LOG_LEVEL
-              value: "DEBUG"
+            # - name: KC_LOG_LEVEL
+            #   value: "DEBUG"
             # - name: KC_HOSTNAME
             #   value: "zoo-keycloak.duckdns.org"
             # - name: KC_HOSTNAME_URL
@@ -70,8 +70,8 @@ metadata:
     #   proxy_set_header Host $host;
     #   proxy_set_header X-Forwarded-Proto $scheme;
     # nginx.ingress.kubernetes.io/proxy-body-size: "50m"
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    # nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    # nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     # nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     # nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
 spec:
