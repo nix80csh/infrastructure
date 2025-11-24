@@ -42,14 +42,14 @@ spec:
               value: "edge"
             - name: KC_HOSTNAME
               value: "zoo-keycloak.duckdns.org"
-            # - name: KC_HOSTNAME_URL
-            #   value: "https://zoo-keycloak.duckdns.org"
-            # - name: KC_HOSTNAME_ADMIN_URL
-            #   value: "https://zoo-keycloak.duckdns.org"
-            # - name: KC_HOSTNAME_STRICT
-            #   value: "false"
-            # - name: KC_HOSTNAME_STRICT_HTTPS
-            #   value: "false"
+            - name: KC_HOSTNAME_URL
+              value: "https://zoo-keycloak.duckdns.org"
+            - name: KC_HOSTNAME_ADMIN_URL
+              value: "https://zoo-keycloak.duckdns.org"
+            - name: KC_HOSTNAME_STRICT
+              value: "false"
+            - name: KC_HOSTNAME_STRICT_HTTPS
+              value: "false"
           ports:
             - name: http
               containerPort: 8080
@@ -63,6 +63,10 @@ kind: Ingress
 metadata:
   name: keycloak
   annotations:
+    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header Host $host;
+      proxy_set_header X-Forwarded-Proto $scheme;
     # nginx.ingress.kubernetes.io/proxy-body-size: "50m"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
