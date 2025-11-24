@@ -74,3 +74,10 @@ spec:
                 name: keycloak
                 port:
                   number: 8080
+          - path: /admin
+            pathType: Prefix
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 8080
