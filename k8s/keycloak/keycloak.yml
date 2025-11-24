@@ -195,7 +195,7 @@ spec:
     - host: zoo-keycloak.duckdns.org
       http:
         paths:
-          - path: /
+          - path: /auth
             pathType: Prefix
             backend:
               service:
