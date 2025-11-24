@@ -66,6 +66,8 @@ spec:
               value: "true"
             # In this explorative setup, no strict hostname is set.
             # For production environments, set a hostname for a secure setup.
+            - name: KC_HOSTNAME
+              value: "zoo-keycloak.duckdns.org"
             - name: KC_HOSTNAME_STRICT
               value: "false"
             - name: KC_HEALTH_ENABLED
