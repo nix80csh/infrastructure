@@ -61,7 +61,7 @@ spec:
     - host: zoo-keycloak.duckdns.org
       http:
         paths:
-          - path: /
+          - path: /admin/master/console/
             pathType: Prefix
             backend:
               service:
