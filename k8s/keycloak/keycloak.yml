@@ -20,7 +20,7 @@ metadata:
   labels:
     app: keycloak
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: keycloak
@@ -61,7 +61,7 @@ spec:
     - host: zoo-keycloak.duckdns.org
       http:
         paths:
-          - path: /admin/master/console/
+          - path: /
             pathType: Prefix
             backend:
               service:
