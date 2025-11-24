@@ -40,6 +40,8 @@ spec:
               value: "admin"
             - name: KC_PROXY
               value: "edge"
+            - name: KC_LOG_LEVEL
+              value: "DEBUG"
             # - name: KC_HOSTNAME
             #   value: "zoo-keycloak.duckdns.org"
             # - name: KC_HOSTNAME_URL
