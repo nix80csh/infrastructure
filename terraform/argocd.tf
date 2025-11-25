@@ -16,6 +16,10 @@ resource "helm_release" "argocd" {
         nodePortHttps: 30181
       ingress:
         enabled: false
+    configs:
+      cm:
+        timeout.reconciliation: 10s
+        repo.server.refresh.seconds: 10
     EOF
   ]
 }
