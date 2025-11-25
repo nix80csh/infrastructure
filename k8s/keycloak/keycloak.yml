@@ -9,7 +9,7 @@ spec:
     - name: http
       port: 8080 # could access by other pods
       targetPort: 8080 # container port = pod port
-      nodePort: 30080 # for local access use NodeIP:NodePort
+      nodePort: 30082 # for local access use NodeIP:NodePort
   selector:
     app: keycloak
   type: NodePort
