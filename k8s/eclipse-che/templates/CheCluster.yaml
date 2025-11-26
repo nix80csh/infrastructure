@@ -12,7 +12,6 @@ spec:
       externalDevfileRegistries:
         - url: 'https://registry.devfile.io'
   devEnvironments: {}
-  networking:
-    ingressDomain: zoo-che.duckdns.org
+  networking: {}
   containerRegistry: {}
   gitServices: {}
