@@ -1,0 +1,47 @@
+annotations:
+  artifacthub.io/crds: |-
+    - kind: CheCluster
+      version: v2
+      name: checlusters.org.eclipse.che
+      displayName: CheCluster
+      description: The `CheCluster` custom resource allows defining and managing a Che server installation
+  artifacthub.io/crdsExamples: |
+    - apiVersion: org.eclipse.che/v2
+      kind: CheCluster
+      metadata:
+        name: eclipse-che
+        namespace: eclipse-che
+      spec:
+        components:
+          pluginRegistry:
+            disableInternalRegistry: true
+          devfileRegistry:
+            disableInternalRegistry: true
+            externalDevfileRegistries:
+              - url: 'https://registry.devfile.io'
+        devEnvironments: {}
+        networking: {}
+        containerRegistry: {}
+        gitServices: {}
+  artifacthub.io/license: EPL-2.0
+  artifacthub.io/links: |
+    - name: repository
+      url: https://github.com/eclipse-che/che-operator
+    - name: web-site
+      url: https://www.eclipse.org/che/
+    - name: docs
+      url: https://www.eclipse.org/che/docs
+    - name: support
+      url: https://github.com/eclipse/che
+  artifacthub.io/maintainers: |
+    - name: Anatolii Bazko
+      email: abazko@redhat.com
+    - name: Oleksandr Andriienko
+      email: oandriie@redhat.com
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Seamless Upgrades
+  artifacthub.io/provider: Eclipse Foundation
+apiVersion: v1
+description: A Helm chart for deploying Eclipse Che on a Kubernetes
+name: eclipse-che
+version: 7.112.0
