@@ -1,0 +1,13 @@
+apiVersion: org.eclipse.che/v2
+kind: CheCluster
+metadata:
+  name: eclipse-che
+  namespace: eclipse-che
+spec:
+  server:
+    exposure: ingress
+    tlsSupport: true
+  auth:
+    identityProvider: keycloak
+    identityProviderRealm: che
+    identityProviderClientId: che-public
