@@ -15,7 +15,6 @@ spec:
     domain: zoo-che.duckdns.org  # Che 서버에 접근하기 위한 도메인 이름
     ingress:
       class: nginx            # 클러스터에 설치된 Ingress Controller 클래스
-      tlsSecretName: che-tls  # (선택) TLS Secret 이름
   devEnvironments: {}
   networking: {}
   containerRegistry: {}
