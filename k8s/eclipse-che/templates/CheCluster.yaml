@@ -12,6 +12,11 @@ spec:
       externalDevfileRegistries:
         - url: 'https://registry.devfile.io'
   devEnvironments: {}
-  networking: {}
+  networking:
+    domain: zoo-che.duckdns.org
+    auth:
+      identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che/.well-known/openid-configuration
+      oAuthClientName: che-public
+      oAuthSecret: 2NyDNDau8timD9w2Hnw0I4ByVFMndigT
   containerRegistry: {}
   gitServices: {}
