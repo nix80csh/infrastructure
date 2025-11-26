@@ -4,10 +4,14 @@ metadata:
   name: eclipse-che
   namespace: eclipse-che
 spec:
-  server:
-    exposure: ingress
-    tlsSupport: true
-  auth:
-    identityProvider: keycloak
-    identityProviderRealm: che
-    identityProviderClientId: che-public
+  components:
+    pluginRegistry:
+      disableInternalRegistry: true
+    devfileRegistry:
+      disableInternalRegistry: true
+      externalDevfileRegistries:
+        - url: 'https://registry.devfile.io'
+  devEnvironments: {}
+  networking: {}
+  containerRegistry: {}
+  gitServices: {}
