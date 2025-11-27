@@ -1,24 +1,24 @@
-# apiVersion: org.eclipse.che/v2
-# kind: CheCluster
-# metadata:
-#   name: eclipse-che
-#   namespace: eclipse-che
-# spec:
-#   components:
-#     pluginRegistry:
-#       disableInternalRegistry: true
-#     devfileRegistry:
-#       disableInternalRegistry: true
-#       externalDevfileRegistries:
-#         - url: 'https://registry.devfile.io'
-#   devEnvironments: {}
-#   networking:
-#     domain: zoo-che.duckdns.org
-#     annotations:
-#       nginx.ingress.kubernetes.io/ssl-redirect: "false"
-#     auth:
-#       identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che
-#       oAuthClientName: che-public
-#       oAuthSecret: 2NyDNDau8timD9w2Hnw0I4ByVFMndigT
-#   containerRegistry: {}
-#   gitServices: {}
+apiVersion: org.eclipse.che/v2
+kind: CheCluster
+metadata:
+  name: eclipse-che
+  namespace: eclipse-che
+spec:
+  components:
+    pluginRegistry:
+      disableInternalRegistry: true
+    devfileRegistry:
+      disableInternalRegistry: true
+      externalDevfileRegistries:
+        - url: 'https://registry.devfile.io'
+  devEnvironments: {}
+  networking:
+    domain: zoo-che.duckdns.org
+    annotations:
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    auth:
+      identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che
+      oAuthClientName: che-public
+      oAuthSecret: 2NyDNDau8timD9w2Hnw0I4ByVFMndigT
+  containerRegistry: {}
+  gitServices: {}
