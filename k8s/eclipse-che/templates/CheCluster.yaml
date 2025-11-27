@@ -4,6 +4,11 @@ metadata:
   name: eclipse-che
   namespace: eclipse-che
 spec:
+  server:
+    # Che가 외부에서 접근되는 URL을 정확히 알도록 지정
+    cheHost: https://zoo-che.duckdns.org
+    # API 외부 URL도 HTTPS로 강제
+    cheApiExternal: https://zoo-che.duckdns.org
   components:
     pluginRegistry:
       disableInternalRegistry: true
