@@ -14,6 +14,7 @@ spec:
   devEnvironments: {}
   networking:
     domain: zoo-che.duckdns.org
+    ingressClassName: nginx
     annotations:
       nginx.ingress.kubernetes.io/ssl-redirect: "false"
     auth:
