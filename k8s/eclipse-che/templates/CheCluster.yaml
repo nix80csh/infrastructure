@@ -4,6 +4,12 @@ metadata:
   name: eclipse-che
   namespace: eclipse-che
 spec:    
+  server:
+    customCheProperties:
+      CHE_MULTIUSER: "false"
+      CHE_OAUTH_ENABLED: "false"
+  auth:
+    identityProvider: null
   components:
     pluginRegistry:
       disableInternalRegistry: true
@@ -18,7 +24,6 @@ spec:
     annotations:
       nginx.ingress.kubernetes.io/ssl-redirect: "false"
     auth:
-      identityProvider: null
       # identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che
       # oAuthClientName: che-public
       # oAuthSecret: k1b1bIA8RpePp0U69HfzmBtrd9xYlDjN
