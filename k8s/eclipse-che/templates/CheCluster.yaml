@@ -3,9 +3,7 @@ kind: CheCluster
 metadata:
   name: eclipse-che
   namespace: eclipse-che
-spec: 
-  auth:
-    identityProvider: null   
+spec:
   components:
     pluginRegistry:
       disableInternalRegistry: true
@@ -19,9 +17,10 @@ spec:
     ingressClassName: nginx
     annotations:
       nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    auth:
-      # identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che
-      # oAuthClientName: che-public
-      # oAuthSecret: k1b1bIA8RpePp0U69HfzmBtrd9xYlDjN
+      nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
+    # auth:
+    #   identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che
+    #   oAuthClientName: che-public
+    #   oAuthSecret: k1b1bIA8RpePp0U69HfzmBtrd9xYlDjN
   containerRegistry: {}
   gitServices: {}
