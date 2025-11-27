@@ -17,7 +17,8 @@ spec:
     annotations:
       nginx.ingress.kubernetes.io/ssl-redirect: "false"
     auth:
-      identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che/.well-known/openid-configuration
+      # identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che/.well-known/openid-configuration
+      identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che
       oAuthClientName: che-public
       oAuthSecret: 2NyDNDau8timD9w2Hnw0I4ByVFMndigT
   containerRegistry: {}
