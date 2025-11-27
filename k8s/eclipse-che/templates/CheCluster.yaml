@@ -3,13 +3,9 @@ kind: CheCluster
 metadata:
   name: eclipse-che
   namespace: eclipse-che
-spec:    
-  server:
-    customCheProperties:
-      CHE_MULTIUSER: "false"
-      CHE_OAUTH_ENABLED: "false"
+spec: 
   auth:
-    identityProvider: null
+    identityProvider: null   
   components:
     pluginRegistry:
       disableInternalRegistry: true
