@@ -20,6 +20,6 @@ spec:
     auth:
       identityProviderURL: https://zoo-keycloak.duckdns.org/realms/che
       oAuthClientName: che-public
-      oAuthSecret: k1b1bIA8RpePp0U69HfzmBtrd9xYlDjN
+      # oAuthSecret: k1b1bIA8RpePp0U69HfzmBtrd9xYlDjN
   containerRegistry: {}
   gitServices: {}
