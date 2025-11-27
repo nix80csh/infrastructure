@@ -74,6 +74,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
 spec:
   ingressClassName: nginx
   tls:
