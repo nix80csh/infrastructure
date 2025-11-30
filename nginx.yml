@@ -11,6 +11,7 @@ services:
     volumes:
       - nginx_data:/data
       - nginx_data:/etc/letsencrypt
+    tty: true
 
 volumes:
   nginx_data:
