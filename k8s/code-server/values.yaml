@@ -38,14 +38,14 @@ service:
   port: 8080
 
 ingress:
-  enabled: false
+  enabled: true
   #annotations:
   #  kubernetes.io/tls-acme: "true"
-  #hosts:
-  #  - host: code-server.example.loc
-  #    paths:
-  #      - /
-  ingressClassName: ""
+  hosts:
+   - host: zoo-code.duckdns.org
+     paths:
+       - /
+  ingressClassName: "nginx"
   #tls:
   #  - secretName: code-server
   #    hosts:
