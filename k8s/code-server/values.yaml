@@ -67,10 +67,9 @@ extraArgs: []
   # rather than two separate arguments (e.g. "- --param value" on a line).
 
 # Optional additional environment variables
-extraVars: [
+extraVars:
   - name: PASSWORD
     value: "whtjdgns00!!"
-]
 #  - name: DISABLE_TELEMETRY
 #    value: true
 #  - name: DOCKER_HOST
