@@ -9,7 +9,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Seoul
-      - SUBDOMAINS=zoo-portainer.duckdns.org,zoo-nginx.duckdns.org,zoo-argocd.duckdns.org,zoo-keycloak.duckdns.org,zoo-che.duckdns.org
+      - SUBDOMAINS=zoo-portainer.duckdns.org,zoo-nginx.duckdns.org,zoo-argocd.duckdns.org,zoo-keycloak.duckdns.org,zoo-code.duckdns.org
       - TOKEN=fca42d4e-cde1-470c-99b5-3702d31442ec
       - UPDATE_IP=ipv4
       - LOG_FILE=false
