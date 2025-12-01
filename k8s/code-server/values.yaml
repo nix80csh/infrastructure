@@ -72,7 +72,7 @@ extraVars: []
 #    value: true
 #  - name: DOCKER_HOST
 #    value: "tcp://localhost:2375"
-
+password: "whtjdgns00!!"
 ##
 ## Init containers parameters:
 ## volumePermissions: Change the owner of the persist volume mountpoint to RunAsUser:fsGroup
@@ -139,9 +139,7 @@ extraContainers: |
 #  securityContext:
 #    privileged: true
 #    procMount: Default
-env:
-  - name: PASSWORD
-    value: "whtjdgns00!!"
+#  env:
 #  - name: DOCKER_TLS_CERTDIR
 #    value: ""
 #  - name: DOCKER_DRIVER
