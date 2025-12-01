@@ -139,7 +139,9 @@ extraContainers: |
 #  securityContext:
 #    privileged: true
 #    procMount: Default
-#  env:
+env:
+  - name: PASSWORD
+    value: "whtjdgns00!!"
 #  - name: DOCKER_TLS_CERTDIR
 #    value: ""
 #  - name: DOCKER_DRIVER
