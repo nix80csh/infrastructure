@@ -38,12 +38,12 @@ spec:
           - sh
           - -c
           - |
-            chown -R {{ .Values.securityContext.runAsUser }}:{{ .Values.securityContext.fsGroup }} /home/chosh
+            chown -R {{ .Values.securityContext.runAsUser }}:{{ .Values.securityContext.fsGroup }} /home/coder
         securityContext:
           runAsUser: {{ .Values.volumePermissions.securityContext.runAsUser }}
         volumeMounts:
         - name: data
-          mountPath: /home/chosh
+          mountPath: /home/coder
 {{- if .Values.extraInitContainers }}
 {{ tpl .Values.extraInitContainers . | indent 6}}
 {{- end }}
@@ -78,7 +78,7 @@ spec:
         {{- end }}
           volumeMounts:
           - name: data
-            mountPath: /home/chosh
+            mountPath: /home/coder
           {{- range .Values.extraConfigmapMounts }}
           - name: {{ .name }}
             mountPath: {{ .mountPath }}
