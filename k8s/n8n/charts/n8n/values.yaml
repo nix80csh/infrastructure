@@ -38,7 +38,7 @@ ingress:
   # define a custom ingress class Name, like "traefik" or "nginx"
   className: ""
   hosts:
-    - host: workflow.example.com
+    - host: n8n.zoo80.duckdns.org
       paths:
         - path: /
           pathType: Prefix
