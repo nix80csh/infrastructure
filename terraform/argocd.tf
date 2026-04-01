@@ -37,7 +37,7 @@ resource "kubernetes_ingress_v1" "argocd_ingress" {
     ingress_class_name = "nginx"
 
     rule {
-      host = "zoo-argocd.duckdns.org"
+      host = "argocd.zoo80.duckdns.org"
       http {
         path {
           path      = "/"
