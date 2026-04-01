@@ -33,10 +33,10 @@ hostAliases: []
 # Ingress
 #
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
   # define a custom ingress class Name, like "traefik" or "nginx"
-  className: ""
+  className: "nginx"
   hosts:
     - host: n8n.zoo80.duckdns.org
       paths:
