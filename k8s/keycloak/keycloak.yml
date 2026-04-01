@@ -44,9 +44,9 @@ spec:
             # - name: KC_LOG_LEVEL
             #   value: "DEBUG"
             - name: KC_HOSTNAME_URL
-              value: "https://zoo-keycloak.duckdns.org"
+              value: "https://keycloak.zoo80.duckdns.org"
             - name: KC_HOSTNAME_ADMIN_URL
-              value: "https://zoo-keycloak.duckdns.org"
+              value: "https://keycloak.zoo80.duckdns.org"
             - name: KC_HOSTNAME_STRICT
               value: "false"
             - name: KC_HOSTNAME_STRICT_HTTPS
@@ -79,9 +79,9 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - zoo-keycloak.duckdns.org
+        - keycloak.zoo80.duckdns.org
   rules:
-    - host: zoo-keycloak.duckdns.org
+    - host: keycloak.zoo80.duckdns.org
       http:
         paths:
           - path: /

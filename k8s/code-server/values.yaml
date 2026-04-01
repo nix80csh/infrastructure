@@ -42,7 +42,7 @@ ingress:
   #annotations:
   #  kubernetes.io/tls-acme: "true"
   hosts:
-   - host: zoo-code.duckdns.org
+   - host: code.zoo80.duckdns.org
      paths:
        - /
   ingressClassName: "nginx"
