@@ -76,7 +76,8 @@ main:
   #        password: 'big secret'
 
   # Extra environmental variables, so you can reference other configmaps and secrets into n8n as env vars.
-  extraEnv: {}
+  extraEnv:
+    N8N_HOST: n8n.zoo80.duckdns.org
   #    N8N_DB_POSTGRESDB_NAME:
   #      valueFrom:
   #        secretKeyRef:
