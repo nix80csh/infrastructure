@@ -34,7 +34,9 @@ hostAliases: []
 #
 ingress:
   enabled: true
-  annotations: {}
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "16k"
+    nginx.ingress.kubernetes.io/proxy-buffers-number: "4"
   # define a custom ingress class Name, like "traefik" or "nginx"
   className: "nginx"
   hosts:
