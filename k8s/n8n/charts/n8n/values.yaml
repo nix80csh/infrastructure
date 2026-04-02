@@ -51,11 +51,12 @@ ingress:
 # The config: {} dictionary is converted to environmental variables in the ConfigMap.
 main:
   # See https://docs.n8n.io/hosting/configuration/environment-variables/ for all values.
-  config: 
-    n8n:
-      host: n8n.zoo80.duckdns.org
-      protocol: https
-    path: /
+  config: {}
+  extraEnv:
+    N8N_HOST: n8n.zoo80.duckdns.org
+    N8N_PROTOCOL: https
+    WEBHOOK_URL: https://n8n.zoo80.duckdns.org/
+    N8N_EDITOR_BASE_URL: https://n8n.zoo80.duckdns.org/
   #    n8n:
   #     license:
   #       activation:
