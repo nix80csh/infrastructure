@@ -77,7 +77,15 @@ main:
 
   # Extra environmental variables, so you can reference other configmaps and secrets into n8n as env vars.
   extraEnv:
-    N8N_HOST: n8n.zoo80.duckdns.org
+    - name: N8N_HOST
+      value: "n8n.zoo80.duckdns.org"
+    - name: N8N_PROTOCOL
+      value: "https"
+    - name: WEBHOOK_URL
+      value: "https://n8n.zoo80.duckdns.org/"
+    - name: N8N_EDITOR_BASE_URL
+      value: "https://n8n.zoo80.duckdns.org/"
+
   #    N8N_DB_POSTGRESDB_NAME:
   #      valueFrom:
   #        secretKeyRef:
