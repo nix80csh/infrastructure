@@ -97,8 +97,8 @@ externalDB:
 
 mysql:
   enabled: true
-  mysqlRootPassword: ""
-  mysqlUser: ""
+  mysqlRootPassword: "whtjdgns00!!"
+  mysqlUser: "mattermost"
   mysqlPassword: ""
   mysqlDatabase: mattermost
 
