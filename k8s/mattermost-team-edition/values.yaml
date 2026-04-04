@@ -99,7 +99,7 @@ mysql:
   enabled: true
   mysqlRootPassword: "whtjdgns00!!"
   mysqlUser: "mattermost"
-  mysqlPassword: ""
+  mysqlPassword: "mattermost"
   mysqlDatabase: mattermost
 
   repository: mysql
