@@ -124,7 +124,14 @@ mysql:
 extraPodAnnotations: {}
 
 ## Additional env vars
-extraEnvVars: []
+extraEnvVars:
+  - name: MM_CONFIG
+    # 이 변수가 핵심입니다. 파일 경로 대신 DB 접속 정보를 직접 줍니다.
+    value: "mysql://mattermost:mattermost@tcp(mattermost-mysql:3306)/mattermost?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
+  - name: MM_SQLSETTINGS_DRIVERNAME
+    value: "mysql"
+  - name: MM_SQLSETTINGS_DATASOURCE
+    value: "mattermost:mattermost@tcp(mattermost-mysql:3306)/mattermost?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
   # This is an example of extra env vars when using with the deployment with GitLab Helm Charts
   # - name: POSTGRES_PASSWORD_GITLAB
   #   valueFrom:
