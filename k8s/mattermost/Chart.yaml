@@ -24,6 +24,6 @@ sources:
 
 dependencies:
   - name: postgresql
-    version: "12.1.2" # 버전은 적당한 것으로
-    repository: "https://charts.bitnami.com/bitnami"
+    version: "12.12.0"
+    repository: bitnami/postgresql
     condition: postgresql.enabled
