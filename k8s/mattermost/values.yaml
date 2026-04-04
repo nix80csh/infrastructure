@@ -151,5 +151,5 @@ serviceAccount:
 postgresql:
   enabled: true
   auth:
-    postgresPassword: "password123"
+    postgresPassword: "MySecretPass!"
     database: "mattermost"
