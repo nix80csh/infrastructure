@@ -149,11 +149,11 @@ serviceAccount:
   name:
   annotations: {}
 
-postgresql:
-  enabled: true
-  auth:
-    postgresPassword: "mattermostPassword" # 원하는 비번으로 수정
-    database: "mattermost"
-  persistence:
-    enabled: true
-    size: 1Gi # 데이터 보존을 위한 PVC 용량
+# postgresql:
+#   enabled: true
+#   auth:
+#     postgresPassword: "mattermostPassword" # 원하는 비번으로 수정
+#     database: "mattermost"
+#   persistence:
+#     enabled: true
+#     size: 1Gi # 데이터 보존을 위한 PVC 용량
