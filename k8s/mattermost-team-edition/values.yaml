@@ -245,7 +245,7 @@ serviceAccount:
 ## Please refer to https://docs.mattermost.com/administration/config-settings.html#configuration-in-database for more information
 ## You can add any config here, but need to respect the format: MM_<GROUPSECTION>_<SETTING>. ie: MM_SERVICESETTINGS_ENABLECOMMANDS: false
 config:
-  # MM_PLUGINSETTINGS_CLIENTDIRECTORY: "./client/plugins"
+  MM_PLUGINSETTINGS_CLIENTDIRECTORY: "./client/plugins"
 
 ## Configure startup, liveness and readiness probes
 startupProbe:
