@@ -13,7 +13,7 @@ global:
     database:
       # Database connection is required. Provide connection details below.
       driver: "postgres" # postgres
-      dataSource: "postgres://postgres:mattermostPassword@my-mm-postgresql:5432/mattermost?sslmode=disable&connect_timeout=10" # Connection string - REQUIRED
+      dataSource: "" # Connection string - REQUIRED
       dataSourceReplicas: [] # Optional read replicas
       # Use an existing secret for database credentials (see secret-mattermost-dbsecret.yaml for required fields)
       existingDatabaseSecret: {}
@@ -148,16 +148,3 @@ serviceAccount:
   create: false
   name:
   annotations: {}
-
-postgresql:
-  enabled: true
-  image:
-    repository: docker.io/bitnami/postgresql # 전체 주소를 다 적어주는 게 안전합니다
-    tag: "12.12.0" # 실제 이미지 버전
-    pullPolicy: IfNotPresent
-  auth:
-    postgresPassword: "mattermostPassword" # 원하는 비번으로 수정
-    database: "mattermost"
-  persistence:
-    enabled: true
-    size: 1Gi # 데이터 보존을 위한 PVC 용량
