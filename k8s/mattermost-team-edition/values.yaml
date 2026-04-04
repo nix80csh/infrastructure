@@ -240,8 +240,6 @@ serviceAccount:
 ## You can add any config here, but need to respect the format: MM_<GROUPSECTION>_<SETTING>. ie: MM_SERVICESETTINGS_ENABLECOMMANDS: false
 config:
   MM_PLUGINSETTINGS_CLIENTDIRECTORY: "./client/plugins"
-  MM_SQLSETTINGS_DRIVERNAME: "mysql"
-  MM_SQLSETTINGS_DATASOURCE: "mattermost:mattermost@tcp(mattermost-mysql:3306)/mattermost?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
 
 ## Configure startup, liveness and readiness probes
 startupProbe:
