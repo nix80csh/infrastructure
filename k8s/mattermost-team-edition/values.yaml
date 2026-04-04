@@ -124,9 +124,7 @@ mysql:
 extraPodAnnotations: {}
 
 ## Additional env vars
-extraEnvVars:
-  - name: MM_CONFIG
-    value: "mysql://mattermost:mattermost@tcp(mattermost-mysql:3306)/mattermost?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
+extraEnvVars: []
   # This is an example of extra env vars when using with the deployment with GitLab Helm Charts
   # - name: POSTGRES_PASSWORD_GITLAB
   #   valueFrom:
