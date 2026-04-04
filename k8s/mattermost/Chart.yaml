@@ -21,3 +21,9 @@ maintainers:
 sources:
 - https://github.com/mattermost/mattermost-server
 - https://github.com/mattermost/mattermost-helm
+
+dependencies:
+  - name: postgresql
+    version: "12.1.2" # 버전은 적당한 것으로
+    repository: "https://charts.bitnami.com/bitnami"
+    condition: postgresql.enabled
