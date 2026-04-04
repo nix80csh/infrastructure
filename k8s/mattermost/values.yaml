@@ -13,7 +13,7 @@ global:
     database:
       # Database connection is required. Provide connection details below.
       driver: "postgres" # postgres
-      dataSource: "" # Connection string - REQUIRED
+      dataSource: "postgres://postgres:password123@mattermost-postgresql:5432/mattermost?sslmode=disable" # Connection string - REQUIRED
       dataSourceReplicas: [] # Optional read replicas
       # Use an existing secret for database credentials (see secret-mattermost-dbsecret.yaml for required fields)
       existingDatabaseSecret: {}
@@ -148,3 +148,8 @@ serviceAccount:
   create: false
   name:
   annotations: {}
+postgresql:
+  enabled: true
+  auth:
+    postgresPassword: "password123"
+    database: "mattermost"
