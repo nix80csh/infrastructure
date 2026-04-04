@@ -87,7 +87,7 @@ mattermostApp:
     metricsName: mattermost-app-metrics
 
   ingress:
-    enabled: false
+    enabled: true
     hosts:
       - mattermost.zoo80.duckdns.org
     tls: []
