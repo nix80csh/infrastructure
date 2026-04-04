@@ -24,6 +24,6 @@ sources:
 
 dependencies:
   - name: postgresql
-    version: "12.1.2" # 차트 버전 (Bitnami PostgreSQL 차트 버전)
-    repository: "https://charts.bitnami.com/bitnami" # 반드시 URL 형태여야 함
+    version: "16.x.x"
+    repository: "oci://registry-1.docker.io/bitnamicharts"
     condition: postgresql.enabled
