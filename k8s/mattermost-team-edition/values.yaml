@@ -126,9 +126,7 @@ extraPodAnnotations: {}
 ## Additional env vars
 extraEnvVars:
   - name: MM_CONFIG
-    value: "mattermost:mattermost@tcp(mattermost-mysql:3306)/mattermost?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
-  - name: MM_CONFIG_DSN
-    value: "mattermost:mattermost@tcp(mattermost-mysql:3306)/mattermost?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
+    value: "mysql://mattermost:mattermost@tcp(mattermost-mysql:3306)/mattermost?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s"
   - name: MM_SQLSETTINGS_DRIVERNAME
     value: "mysql"
   - name: MM_SQLSETTINGS_DATASOURCE
