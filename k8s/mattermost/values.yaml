@@ -5,9 +5,9 @@ global:
   # Option 1: Provide license content directly
   mattermostLicense: ""
   # Option 2: Use an existing secret
-  existingLicenseSecret:
-    name: ""
-    key: ""
+  existingLicenseSecret: {}
+    # name: ""
+    # key: ""
 
   features:
     database:
@@ -16,9 +16,9 @@ global:
       dataSource: "postgres://postgres:mattermostPassword@my-mm-postgresql:5432/mattermost?sslmode=disable&connect_timeout=10" # Connection string - REQUIRED
       dataSourceReplicas: [] # Optional read replicas
       # Use an existing secret for database credentials (see secret-mattermost-dbsecret.yaml for required fields)
-      existingDatabaseSecret:
-        name:
-        key:
+      existingDatabaseSecret: {}
+        # name:
+        # key:
 
     fileStore:
       # External file storage is required for production deployments
@@ -149,11 +149,11 @@ serviceAccount:
   name:
   annotations: {}
 
-# postgresql:
-#   enabled: true
-#   auth:
-#     postgresPassword: "mattermostPassword" # 원하는 비번으로 수정
-#     database: "mattermost"
-#   persistence:
-#     enabled: true
-#     size: 1Gi # 데이터 보존을 위한 PVC 용량
+postgresql:
+  enabled: true
+  auth:
+    postgresPassword: "mattermostPassword" # 원하는 비번으로 수정
+    database: "mattermost"
+  persistence:
+    enabled: true
+    size: 1Gi # 데이터 보존을 위한 PVC 용량
