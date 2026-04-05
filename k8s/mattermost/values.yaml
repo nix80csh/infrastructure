@@ -59,7 +59,7 @@ global:
 
 # Mattermost deployment section.
 mattermostApp:
-  replicaCount: 3
+  replicaCount: 1
   image:
     repository: mattermost/mattermost-team-edition
     tag: 11.1.1
@@ -95,15 +95,6 @@ mattermostApp:
       #   hosts:
       #     - mattermost.zoo80.duckdns.org
     annotations:
-      kubernetes.io/ingress.class: nginx
-      # 버퍼링을 꺼야 메시지가 즉시 전달됩니다.
-      nginx.ingress.kubernetes.io/proxy-buffering: "off"
-      nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
-      nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
-      # 멀티 포드 환경에서 세션 유지를 돕습니다.
-      nginx.ingress.kubernetes.io/affinity: "cookie"
-      nginx.ingress.kubernetes.io/session-cookie-name: "route"
-    # annotations:
       # kubernetes.io/ingress.class: nginx
       # nginx.ingress.kubernetes.io/proxy-buffering: "on"
       # nginx.ingress.kubernetes.io/proxy-body-size: 50m
@@ -149,13 +140,7 @@ mattermostApp:
   extraVolumeMounts: []
   ## Additional environment variables for advanced configuration
   ## See: https://docs.mattermost.com/administration/config-settings.html
-  extraEnv: 
-    - name: MM_CLUSTERSETTINGS_ENABLE
-      value: "true"
-    - name: MM_CLUSTERSETTINGS_CLUSTERNAME
-      value: "production"
-    - name: MM_CLUSTERSETTINGS_USEIPADDRESS
-      value: "true"
+  extraEnv: []
   envFrom: []
   extraPodAnnotations: {}
 
