@@ -1,6 +1,6 @@
 global:
   # REQUIRED: URL users will access Mattermost at
-  siteUrl: "http://mattermost.zoo80.duckdns.org"
+  siteUrl: "https://mattermost.zoo80.duckdns.org"
   # OPTIONAL: Mattermost Enterprise license
   # Option 1: Provide license content directly
   mattermostLicense: ""
