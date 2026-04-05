@@ -59,7 +59,7 @@ global:
 
 # Mattermost deployment section.
 mattermostApp:
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: mattermost/mattermost-team-edition
     tag: 11.1.1
@@ -94,13 +94,12 @@ mattermostApp:
       # - secretName: mattermost-tls
       #   hosts:
       #     - mattermost.zoo80.duckdns.org
-    annotations:
-      # 1. 웹소켓 및 프록시 버퍼링 해제 (실시간성 확보)
-      nginx.ingress.kubernetes.io/proxy-buffering: "off"
-      nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
-      nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    annotations: {}
       # kubernetes.io/ingress.class: nginx
+      # nginx.ingress.kubernetes.io/proxy-buffering: "on"
       # nginx.ingress.kubernetes.io/proxy-body-size: 50m
+      # nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+      # nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
       # nginx.ingress.kubernetes.io/configuration-snippet: |
       #   proxy_cache mattermost_cache;
       #   proxy_cache_revalidate on;
