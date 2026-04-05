@@ -59,7 +59,7 @@ global:
 
 # Mattermost deployment section.
 mattermostApp:
-  replicaCount: 1
+  replicaCount: 2
   image:
     repository: mattermost/mattermost-team-edition
     tag: 11.1.1
@@ -140,7 +140,16 @@ mattermostApp:
   extraVolumeMounts: []
   ## Additional environment variables for advanced configuration
   ## See: https://docs.mattermost.com/administration/config-settings.html
-  extraEnv: []
+  extraEnv: 
+    # 클러스터 모드 활성화
+    - name: MM_CLUSTERSETTINGS_ENABLE
+      value: "true"
+    # 클러스터 내에서 서로를 식별할 이름 (동일하게 설정)
+    - name: MM_CLUSTERSETTINGS_CLUSTERNAME
+      value: "production"
+    # 포드 간 통신 시 쿠버네티스 내부 포드 IP 사용 활성화
+    - name: MM_CLUSTERSETTINGS_USEIPADDRESS
+      value: "true"
   envFrom: []
   extraPodAnnotations: {}
 
