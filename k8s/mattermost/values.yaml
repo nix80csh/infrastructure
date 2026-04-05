@@ -94,7 +94,7 @@ mattermostApp:
       # - secretName: mattermost-tls
       #   hosts:
       #     - mattermost.zoo80.duckdns.org
-    annotations: {}
+    annotations:
       # 1. 웹소켓 및 프록시 버퍼링 해제 (실시간성 확보)
       nginx.ingress.kubernetes.io/proxy-buffering: "off"
       nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
